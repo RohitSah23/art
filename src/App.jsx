@@ -1,18 +1,15 @@
-import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 
-import "./App.css";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
     <>
       <ThemeProvider>
-        <h1 class="text-3xl font-bold underline">Hello world!</h1>
+        <Navbar/>
       </ThemeProvider>
     </>
   );
 }
 
-export default App;
+export default App

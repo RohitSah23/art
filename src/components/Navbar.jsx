@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useTheme } from "../../context/ThemeContext";
-import Button from "../common/Button/Button";
+import { useTheme } from "../context/ThemeContext.jsx";
+import Button from "./common/Button/Button";
 // import { GetInTouchIcon, Logo, GetInTouchHover } from "../../assets/assets";
 import { Menu, X } from "lucide-react";
 
-const navLinks = ["Home", "Features", "Solutions", "Ecosystem", "Tokenomics"];
+const navLinks = ["Home", "Products", "About", "Testimonials", "Contact Us"];
 
 const Navbar = () => {
   const { darkMode, toggleTheme } = useTheme();
@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="container mx-auto max-w-7xl flex justify-between items-center relative">
           <a href="/">
             {/* <img src={Logo} alt="Logo" className="h-8" /> */}
-            Rohit
+            Kunj
           </a>
 
           <ul className="hidden md:flex space-x-6 text-sm font-medium">
@@ -57,13 +57,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggleButton darkMode={darkMode} toggleTheme={toggleTheme} />
 
-            <Button
-              icon={GetInTouchIcon}
-              label="Get In Touch"
-              hoverIcon={GetInTouchHover}
-              link="https://tidycal.com/hspuri26/30-minute-meeting"
-              className="bg-black"
-            />
+    
           </div>
 
           <div className=" md:hidden flex items-center">
@@ -116,13 +110,7 @@ const Navbar = () => {
               <div className="flex flex-col items-start space-y-4 mt-4">
                 <ThemeToggleButton darkMode={darkMode} toggleTheme={toggleTheme} />
 
-                <Button
-                  icon={GetInTouchIcon}
-                  label="Get In Touch"
-                  className="bg-black"
-                  link="https://tidycal.com/hspuri26/30-minute-meeting"
-                  hoverIcon={GetInTouchHover}
-                />
+        
               </div>
             </div>
           </div>
